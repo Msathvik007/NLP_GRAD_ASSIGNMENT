@@ -24,4 +24,15 @@ class DependencyParsingDataset(Dataset):
             torch.tensor([pos_index], dtype=torch.long).unsqueeze(0),
             torch.tensor([head_index], dtype=torch.long).unsqueeze(0),
             torch.tensor([deprel_index], dtype=torch.long).unsqueeze(0))
+    
+    
 
+def build_vocab(file_path, column_index):
+    vocab = {}
+    with open(file_path, 'r') as file:
+        for line in file:
+            if line.strip() and not line.startswith("#"):
+                parts = line.strip().split()
+                if parts[column_index] not in vocab:
+                    vocab[parts[column_index]] = len(vocab)
+    return vocab
