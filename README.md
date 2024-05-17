@@ -1,1 +1,2 @@
 # NLP_GRAD_ASSIGNMENT
+Implementaion of the Neural Arc Dependcy Parser Using BiLSTM. Download the data file mentioned above and python files run the code in any notebook for reference note book also uploaded. The Data consists both EWT(English) UD Telugu Data. Both consist of train, test and dev data. Train data is used to train the model where test and dev data is used for evaluation of the model.
